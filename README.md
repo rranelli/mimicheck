@@ -1,6 +1,8 @@
 # MimiCheck
 
-A Quickcheck inspired testing library.
+A Quickcheck inspired testing library with dependency injection in mind.
+
+[![Build Status](https://travis-ci.org/rranelli/mimicheck.svg)](https://travis-ci.org/rranelli/mimicheck)
 
 ## Installation
 
@@ -38,6 +40,14 @@ git commits and tags, and push the `.gem` file to
 
 Bug reports and pull requests are welcome on GitHub at
 https://github.com/[USERNAME]/mimicheck.
+
+### Pending Features && TODO
+
+* Add support for the Frequency generator
+* Add a better support for instantiating generators (probably including them in
+a module with factory methods)
+* Add support for shrinking (**big feature**!)
+* Allow better support of "sized" generators. Passing in a range sucks
 
 ## License
 

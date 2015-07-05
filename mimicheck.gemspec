@@ -10,8 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['renanranelli@gmail.com']
 
   spec.summary       = 'A Quickcheck-inspired test utilities library'
-  spec.description   = 'TODO: Write a longer description or delete this line.'
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = 'http://github.com/rranelli/mimicheck'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`
@@ -22,7 +21,13 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
+  spec.add_dependency 'method_source'
+
   spec.add_development_dependency 'bundler', '~> 1.10'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec'
+
+  spec.add_development_dependency 'pry-byebug'
+  spec.add_development_dependency 'pry-doc'
+  spec.add_development_dependency 'method_source'
 end
