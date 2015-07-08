@@ -11,7 +11,7 @@ describe MimiCheck::Generator::Bool do
     it 'is uniformly distributed' do
       gens = (1..500)
         .map(&generate)
-        .group_by(&:itself)
+        .group_by { |x| x }
         .map { |k, v| [k, v.size.to_f] }.to_h
 
       diff = gens[true] / (gens[false] + gens[true])

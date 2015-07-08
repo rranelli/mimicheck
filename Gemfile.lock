@@ -45,7 +45,6 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.10)
-  method_source (~> 0.8)
   mimicheck!
   pry-byebug (~> 3.0)
   pry-doc (~> 0.8)

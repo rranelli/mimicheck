@@ -22,9 +22,13 @@ module MimiCheck
       fail 'You must define a list of examples with let(:examples) { ... }'
     end
 
+    def trials
+      MimiCheck.trials
+    end
+
     private
 
-    def checker_for(prop, trls = MimiCheck.trials)
+    def checker_for(prop, trls = trials)
       trls = trials if respond_to?(:trials)
       MimiCheck::Checker.for(prop).with(trials: trls)
     end
