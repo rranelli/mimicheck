@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     mimicheck (0.1.0)
-      method_source
+      method_source (~> 0.8)
 
 GEM
   remote: https://rubygems.org/
@@ -45,12 +45,12 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.10)
-  method_source
+  method_source (~> 0.8)
   mimicheck!
-  pry-byebug
-  pry-doc
+  pry-byebug (~> 3.0)
+  pry-doc (~> 0.8)
   rake (~> 10.0)
-  rspec
+  rspec (~> 3.0)
 
 BUNDLED WITH
    1.10.5
