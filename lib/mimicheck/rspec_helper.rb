@@ -29,7 +29,6 @@ module MimiCheck
     private
 
     def checker_for(prop, trls = trials)
-      trls = trials if respond_to?(:trials)
       MimiCheck::Checker.for(prop).with(trials: trls)
     end
   end

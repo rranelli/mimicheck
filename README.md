@@ -43,6 +43,7 @@ https://github.com/[USERNAME]/mimicheck.
 
 ### Pending Features && TODO
 
+* Fix splat to properties. All properties should take only *one* argument
 * Add support for the Frequency generator
 * Add a better support for instantiating generators (probably including them in
 a module with factory methods)
