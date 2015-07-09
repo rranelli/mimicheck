@@ -42,7 +42,7 @@ module MimiCheck
       example, *es = exs
       return MimiCheck::Result::Success.new(property) unless example
 
-      result, error = safe_check(*example)
+      result, error = safe_check(*Array(example))
       return MimiCheck::Result::Falsified.new(property, error) unless result
 
       check_examples!(es)

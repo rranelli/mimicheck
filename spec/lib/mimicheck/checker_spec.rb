@@ -19,7 +19,7 @@ describe MimiCheck::Checker do
     end
 
     context 'when the property is falsified' do
-      let(:property) { -> (*) { false } }
+      let(:property) { -> (_, _) { false } }
 
       it { is_expected.to be_a(MimiCheck::Result::Falsified) }
 
@@ -32,7 +32,7 @@ describe MimiCheck::Checker do
       end
 
       context 'when the property throws an exception' do
-        let(:property) { -> (*) { fail } }
+        let(:property) { -> (_, _) { fail } }
 
         it { is_expected.to be_a(MimiCheck::Result::Falsified) }
 
@@ -50,7 +50,7 @@ describe MimiCheck::Checker do
   describe '#check_examples' do
     subject(:check_examples) { checker.check_examples(examples) }
 
-    let(:examples) { (0..rand(1..50)).map { |x| [x, x] } }
+    let(:examples) { (0..rand(1..50)).map { |x| [{ a: x }, { b: x }] } }
 
     let(:num_examples) { examples.size }
 
