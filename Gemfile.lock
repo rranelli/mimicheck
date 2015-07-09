@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mimicheck (0.1.2)
+    mimicheck (0.1.4)
       method_source (~> 0.8)
 
 GEM
