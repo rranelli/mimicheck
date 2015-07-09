@@ -6,6 +6,7 @@ RSpec::Core::RakeTask.new(:spec)
 task default: :spec
 
 task deploy: [:build] do
+  sh 'bundle install'
   sh 'gem push pkg/*.gem'
   sh 'rm -rf pkg/'
 end

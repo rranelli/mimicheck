@@ -8,6 +8,8 @@ require_relative 'mimicheck/rspec_helper'
 module MimiCheck
   class << self
     attr_accessor :trials
+    attr_accessor :fail_fast
   end
   self.trials ||= 100
+  self.fail_fast = false
 end

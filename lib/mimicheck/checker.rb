@@ -52,6 +52,7 @@ module MimiCheck
     def safe_check(*example)
       [property.call(*example), { example: example }]
     rescue => error
+      raise if MimiCheck.fail_fast
       [false, { example: example, error: error }]
     end
   end
