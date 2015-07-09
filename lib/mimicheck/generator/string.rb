@@ -3,7 +3,7 @@ module MimiCheck
     class String
       include Generator
 
-      def initialize(range = 25)
+      def initialize(range = 0..25)
         @range = range
       end
       attr_reader :range
