@@ -12,7 +12,7 @@ module MimiCheck
 
       def generate
         size = Int.new(size_range).generate
-        (1..size).map(&generator)
+        (1..size).map { generator.call }
       end
     end
   end
